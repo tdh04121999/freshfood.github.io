@@ -1,0 +1,1583 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Fresh food - Hệ thống cửa hàng thực phẩm sạch</title>
+    <link rel="stylesheet" type="text/css" href="public/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="public/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="public/css/global.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="public/font/font-awsome/fa/css/font-awesome.css"
+    />
+
+    <!-- owlcarousel css-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="public/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="public/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css"
+    />
+    <!-- owlcarousel js-->
+    <script src="public/jquery-3.5.0/jquery-3.5.0.min.js"></script>
+    <script src="public/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+    <script src="public/OwlCarousel2-2.3.4/main.js"></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <header id="header" class="">
+        <div class="topbar-header">
+          <div class="container d-flex flex-between">
+            <div class="info-header">
+              <ul class="d-flex">
+                <li class="phone">
+                  <i class="fa fa-mobile" aria-hidden="true"></i>
+                  <b>Điện thoại: 0378700580</b>
+                </li>
+                <li class="email">
+                  <i class="fa fa-envelope" aria-hidden="true"></i>
+                  <b>Email:</b>
+                  <span><a href="#">tdh04121999@hotmail.com</a></span>
+                </li>
+              </ul>
+            </div>
+            <div class="login-header">
+              <ul class="d-flex flex-center">
+                <li class="login">
+                  <a href="#" title="">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    Đăng nhập
+                  </a>
+                </li>
+                <li><span style="padding: 0px 5px">-</span></li>
+                <li class="register">
+                  <a href="" title="">Đăng ký</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- end container -->
+        </div>
+        <!-- End topbar-header -->
+
+        <div class="container">
+          <div class="header-content d-flex flex-between flex-center">
+            <div id="logo">
+              <a href="index.php" title=""
+                ><img src="public/img/logo_small-1.png" alt="logo"
+              /></a>
+            </div>
+            <div id="header-services" class="d-flex">
+              <div class="item-policy transport d-flex flex-center">
+                <a href="#" title="">
+                  <img src="public/img/policy1-0x0.png" alt="" />
+                </a>
+                <div class="info">
+                  <a href="#" title="">Miễn phí vận chuyển</a>
+                  <p>Bán kính 100km</p>
+                </div>
+              </div>
+
+              <div class="item-policy support d-flex flex-center">
+                <a href="#" title="">
+                  <img src="public/img/policy2-0x0.png" alt="" />
+                </a>
+                <div class="info">
+                  <a href="#" title="">Hỗ trợ 24/7</a>
+                  <p>Hotline: <b>0123456789</b></p>
+                </div>
+              </div>
+
+              <div class="item-policy time-work d-flex flex-center">
+                <a href="#" title="">
+                  <img src="public/img/policy3-0x0.png" alt="" />
+                </a>
+                <div class="info">
+                  <a href="#" title="">Giờ làm việc</a>
+                  <p>T2 - T7 Giờ hành chính</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="top-cart">
+              <div class="heading-cart">
+                <a href="#" title="" class="d-flex flex-center">
+                  <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                  <div class="cart-content">
+                    <span class="label">Giỏ hàng</span>
+                    <span class="cart-count">(0)</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- end header-content -->
+        </div>
+        <!-- end container -->
+
+        <nav>
+          <div class="container d-flex flex-between flex-center">
+            <ul id="main-menu" class="d-flex">
+              <li><a href="" title="">Trang chủ</a></li>
+              <li><a href="" title="">Giới thiệu</a></li>
+              <li><a href="" title="">Sản phẩm</a></li>
+              <li><a href="" title="">Tin tức</a></li>
+              <li><a href="" title="">Liên hệ</a></li>
+            </ul>
+
+            <form
+              action=""
+              method="get"
+              id="search-form"
+              accept-charset="utf-8"
+            >
+              <input
+                type="text"
+                name="search"
+                class="search-text"
+                placeholder="Tìm kiếm"
+              />
+              <button type="submit" id="btn-search">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </button>
+            </form>
+          </div>
+          <!-- End container -->
+        </nav>
+      </header>
+      <!-- /header -->
+
+      <section class="category-slider">
+        <div class="container d-flex flex-between">
+          <aside class="sidebar-category">
+            <div class="aside-head">
+              <h2 class="title-head">
+                <span>Danh mục sản phẩm</span>
+              </h2>
+            </div>
+            <div class="aside-content">
+              <ul id="aside-category">
+                <li><a href="" title="">Hải sản nhập khẩu</a></li>
+                <li><a href="" title="">Hải sản tươi</a></li>
+                <li><a href="">Hoa quả nhập khẩu</a></li>
+                <li><a href="" title="">Rau, củ sạch</a></li>
+                <li><a href="" title="">Thịt tươi</a></li>
+                <li><a href="" title="">Thực phẩm đông lạnh</a></li>
+                <li><a href="" title="">Trái cây tươi</a></li>
+                <li><a href="" title="">Đồ uống</a></li>
+              </ul>
+            </div>
+          </aside>
+
+          <div class="main-slider">
+            <!-- Set up your HTML -->
+            <div class="owl-carousel" id="main-slider">
+              <div>
+                <a href="#">
+                  <img src="public/img/banner 1-1360x577.png" alt="" />
+                </a>
+              </div>
+              <div>
+                <a href="#">
+                  <img src="public/img/banner 2-1360x577.png" alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div id="wp-content">
+        <div id="content">
+          <div class="container">
+            <div class="section-banner">
+              <!-- Set up your HTML -->
+              <div class="owl-carousel" id="banner-slider">
+                <div>
+                  <a href="">
+                    <img src="public/img/banner-1-0x0.png" alt="" />
+                  </a>
+                </div>
+                <div>
+                  <a href="">
+                    <img src="public/img/banner-2-0x0.png" alt="" />
+                  </a>
+                </div>
+                <div>
+                  <a href="">
+                    <img src="public/img/banner-3-0x0.png" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-wrapper">
+              <div class="collection-main">
+                <div class="section-title d-flex flex-between flex-center">
+                  <h2>Trái cây nhập khẩu</h2>
+
+                  <ul class="tab-title d-flex tab">
+                    <li class="current">
+                      <a href="#tab1" title="">
+                        <span>Hoa quả nhập khẩu</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#tab2" title="">
+                        <span>Rau, củ sạch</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#tab3" title="">
+                        <span>Trái cây tươi</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="category-custom tab-content">
+                  <div class="tab-item" id="tab1">
+                    <ul class="owl-carousel category-product">
+                      <li>
+                        <div class="product-item">
+                          <div class="product-thumbnail">
+                            <a href="#" title="" class="product-thumb">
+                              <img src="public/img/thumb1.jpg" alt="" />
+                            </a>
+                            <div
+                              class="product-action d-flex flex-center flex-justify-center"
+                            >
+                              <a
+                                href="fds"
+                                class="btn-buy"
+                                title="Thêm vào giỏ hàng"
+                              >
+                                <i
+                                  class="fa fa-shopping-bag"
+                                  aria-hidden="true"
+                                ></i>
+                              </a>
+
+                              <a href="" class="btn-view" title="Xem chi tiết">
+                                <i class="fa fa-eye" aria-hidden="true"></i>
+                              </a>
+                            </div>
+                          </div>
+
+                          <div class="product-info">
+                            <h3 class="product-name">
+                              <a href="#" title="">Kiwi xanh</a>
+                            </h3>
+                            <div class="price-box">
+                              <div class="special-price">
+                                <span class="price product-price"
+                                  >119,000đ</span
+                                >
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="product-item">
+                          <div class="product-thumbnail">
+                            <a href="#" title="" class="product-thumb">
+                              <img src="public/img/thumb2.jpg" alt="" />
+                            </a>
+
+                            <div
+                              class="product-action d-flex flex-center flex-justify-center"
+                            >
+                              <a
+                                href="fds"
+                                class="btn-buy"
+                                title="Thêm vào giỏ hàng"
+                              >
+                                <i
+                                  class="fa fa-shopping-bag"
+                                  aria-hidden="true"
+                                ></i>
+                              </a>
+
+                              <a href="" class="btn-view" title="Xem chi tiết">
+                                <i class="fa fa-eye" aria-hidden="true"></i>
+                              </a>
+                            </div>
+                          </div>
+
+                          <div class="product-info">
+                            <h3 class="product-name">
+                              <a href="#" title="">Cam mỹ</a>
+                            </h3>
+                            <div class="price-box">
+                              <div class="special-price">
+                                <span class="price product-price"
+                                  >156,000đ</span
+                                >
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="product-item">
+                          <div class="product-thumbnail">
+                            <a href="#" title="" class="product-thumb">
+                              <img src="public/img/thumb3.jpg" alt="" />
+                            </a>
+
+                            <div
+                              class="product-action d-flex flex-center flex-justify-center"
+                            >
+                              <a
+                                href="fds"
+                                class="btn-buy"
+                                title="Thêm vào giỏ hàng"
+                              >
+                                <i
+                                  class="fa fa-shopping-bag"
+                                  aria-hidden="true"
+                                ></i>
+                              </a>
+
+                              <a href="" class="btn-view" title="Xem chi tiết">
+                                <i class="fa fa-eye" aria-hidden="true"></i>
+                              </a>
+                            </div>
+                          </div>
+
+                          <div class="product-info">
+                            <h3 class="product-name">
+                              <a href="#" title="">Chuối</a>
+                            </h3>
+                            <div class="price-box">
+                              <div class="special-price">
+                                <span class="price product-price">60,000đ</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="product-item">
+                          <div class="product-thumbnail">
+                            <a href="#" title="" class="product-thumb">
+                              <img src="public/img/thumb4.jpg" alt="" />
+                            </a>
+
+                            <div
+                              class="product-action d-flex flex-center flex-justify-center"
+                            >
+                              <a
+                                href="fds"
+                                class="btn-buy"
+                                title="Thêm vào giỏ hàng"
+                              >
+                                <i
+                                  class="fa fa-shopping-bag"
+                                  aria-hidden="true"
+                                ></i>
+                              </a>
+
+                              <a href="" class="btn-view" title="Xem chi tiết">
+                                <i class="fa fa-eye" aria-hidden="true"></i>
+                              </a>
+                            </div>
+                          </div>
+
+                          <div class="product-info">
+                            <h3 class="product-name">
+                              <a href="#" title="">Canh vàng</a>
+                            </h3>
+                            <div class="price-box">
+                              <div class="special-price">
+                                <span class="price product-price">98,000đ</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="product-item">
+                          <div class="product-thumbnail">
+                            <a href="#" title="" class="product-thumb">
+                              <img src="public/img/thumb5.jpg" alt="" />
+                            </a>
+
+                            <div
+                              class="product-action d-flex flex-center flex-justify-center"
+                            >
+                              <a
+                                href="fds"
+                                class="btn-buy"
+                                title="Thêm vào giỏ hàng"
+                              >
+                                <i
+                                  class="fa fa-shopping-bag"
+                                  aria-hidden="true"
+                                ></i>
+                              </a>
+
+                              <a href="" class="btn-view" title="Xem chi tiết">
+                                <i class="fa fa-eye" aria-hidden="true"></i>
+                              </a>
+                            </div>
+                          </div>
+
+                          <div class="product-info">
+                            <h3 class="product-name">
+                              <a href="#" title="">Mận Sapa</a>
+                            </h3>
+                            <div class="price-box">
+                              <div class="special-price">
+                                <span class="price product-price">90,000đ</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="product-item">
+                          <div class="product-thumbnail">
+                            <a href="#" title="" class="product-thumb">
+                              <img src="public/img/thumb6.jpg" alt="" />
+                            </a>
+
+                            <div
+                              class="product-action d-flex flex-center flex-justify-center"
+                            >
+                              <a
+                                href="fds"
+                                class="btn-buy"
+                                title="Thêm vào giỏ hàng"
+                              >
+                                <i
+                                  class="fa fa-shopping-bag"
+                                  aria-hidden="true"
+                                ></i>
+                              </a>
+
+                              <a href="" class="btn-view" title="Xem chi tiết">
+                                <i class="fa fa-eye" aria-hidden="true"></i>
+                              </a>
+                            </div>
+
+                            <div class="sale-flash">
+                              <div class="before"></div>
+                              -20%
+                            </div>
+                          </div>
+
+                          <div class="product-info">
+                            <h3 class="product-name">
+                              <a href="#" title="">Măng cụt</a>
+                            </h3>
+                            <div
+                              class="price-box d-flex flex-center flex-justify-center"
+                            >
+                              <div class="special-price">
+                                <span class="price product-price">80,000đ</span>
+                              </div>
+                              <div class="old-price">
+                                <span class="price product-price-old"
+                                  >100,000đ</span
+                                >
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="product-item">
+                          <div class="product-thumbnail">
+                            <a href="#" title="" class="product-thumb">
+                              <img src="public/img/thumb7.jpg" alt="" />
+                            </a>
+
+                            <div
+                              class="product-action d-flex flex-center flex-justify-center"
+                            >
+                              <a
+                                href="fds"
+                                class="btn-buy"
+                                title="Thêm vào giỏ hàng"
+                              >
+                                <i
+                                  class="fa fa-shopping-bag"
+                                  aria-hidden="true"
+                                ></i>
+                              </a>
+
+                              <a href="" class="btn-view" title="Xem chi tiết">
+                                <i class="fa fa-eye" aria-hidden="true"></i>
+                              </a>
+                            </div>
+                          </div>
+
+                          <div class="product-info">
+                            <h3 class="product-name">
+                              <a href="#" title="">Mâm xôi đen</a>
+                            </h3>
+                            <div class="price-box">
+                              <div class="special-price">
+                                <span class="price product-price"
+                                  >199,000đ</span
+                                >
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="product-item">
+                          <div class="product-thumbnail">
+                            <a href="#" title="" class="product-thumb">
+                              <img src="public/img/thumb8.jpg" alt="" />
+                            </a>
+
+                            <div
+                              class="product-action d-flex flex-center flex-justify-center"
+                            >
+                              <a
+                                href="fds"
+                                class="btn-buy"
+                                title="Thêm vào giỏ hàng"
+                              >
+                                <i
+                                  class="fa fa-shopping-bag"
+                                  aria-hidden="true"
+                                ></i>
+                              </a>
+
+                              <a href="" class="btn-view" title="Xem chi tiết">
+                                <i class="fa fa-eye" aria-hidden="true"></i>
+                              </a>
+                            </div>
+                          </div>
+
+                          <div class="product-info">
+                            <h3 class="product-name">
+                              <a href="#" title="">Táo xanh New</a>
+                            </h3>
+                            <div class="price-box">
+                              <div class="special-price">
+                                <span class="price product-price"
+                                  >220,000đ</span
+                                >
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- End tab-item1 -->
+
+                  <div class="tab-item" id="tab2">
+                    <ul class="owl-carousel category-product">
+                      <li>
+                        <div class="product-item">
+                          <div class="product-thumbnail">
+                            <a href="#" title="" class="product-thumb">
+                              <img src="public/img/thumb1.jpg" alt="" />
+                            </a>
+                            <div
+                              class="product-action d-flex flex-center flex-justify-center"
+                            >
+                              <a
+                                href="fds"
+                                class="btn-buy"
+                                title="Thêm vào giỏ hàng"
+                              >
+                                <i
+                                  class="fa fa-shopping-bag"
+                                  aria-hidden="true"
+                                ></i>
+                              </a>
+
+                              <a href="" class="btn-view" title="Xem chi tiết">
+                                <i class="fa fa-eye" aria-hidden="true"></i>
+                              </a>
+                            </div>
+                          </div>
+
+                          <div class="product-info">
+                            <h3 class="product-name">
+                              <a href="#" title="">Kiwi xanh</a>
+                            </h3>
+                            <div class="price-box">
+                              <div class="special-price">
+                                <span class="price product-price"
+                                  >119,000đ</span
+                                >
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="product-item">
+                          <div class="product-thumbnail">
+                            <a href="#" title="" class="product-thumb">
+                              <img src="public/img/thumb2.jpg" alt="" />
+                            </a>
+
+                            <div
+                              class="product-action d-flex flex-center flex-justify-center"
+                            >
+                              <a
+                                href="fds"
+                                class="btn-buy"
+                                title="Thêm vào giỏ hàng"
+                              >
+                                <i
+                                  class="fa fa-shopping-bag"
+                                  aria-hidden="true"
+                                ></i>
+                              </a>
+
+                              <a href="" class="btn-view" title="Xem chi tiết">
+                                <i class="fa fa-eye" aria-hidden="true"></i>
+                              </a>
+                            </div>
+                          </div>
+
+                          <div class="product-info">
+                            <h3 class="product-name">
+                              <a href="#" title="">Cam mỹ</a>
+                            </h3>
+                            <div class="price-box">
+                              <div class="special-price">
+                                <span class="price product-price"
+                                  >156,000đ</span
+                                >
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="product-item">
+                          <div class="product-thumbnail">
+                            <a href="#" title="" class="product-thumb">
+                              <img src="public/img/thumb3.jpg" alt="" />
+                            </a>
+
+                            <div
+                              class="product-action d-flex flex-center flex-justify-center"
+                            >
+                              <a
+                                href="fds"
+                                class="btn-buy"
+                                title="Thêm vào giỏ hàng"
+                              >
+                                <i
+                                  class="fa fa-shopping-bag"
+                                  aria-hidden="true"
+                                ></i>
+                              </a>
+
+                              <a href="" class="btn-view" title="Xem chi tiết">
+                                <i class="fa fa-eye" aria-hidden="true"></i>
+                              </a>
+                            </div>
+                          </div>
+
+                          <div class="product-info">
+                            <h3 class="product-name">
+                              <a href="#" title="">Chuối</a>
+                            </h3>
+                            <div class="price-box">
+                              <div class="special-price">
+                                <span class="price product-price">60,000đ</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="product-item">
+                          <div class="product-thumbnail">
+                            <a href="#" title="" class="product-thumb">
+                              <img src="public/img/thumb4.jpg" alt="" />
+                            </a>
+
+                            <div
+                              class="product-action d-flex flex-center flex-justify-center"
+                            >
+                              <a
+                                href="fds"
+                                class="btn-buy"
+                                title="Thêm vào giỏ hàng"
+                              >
+                                <i
+                                  class="fa fa-shopping-bag"
+                                  aria-hidden="true"
+                                ></i>
+                              </a>
+
+                              <a href="" class="btn-view" title="Xem chi tiết">
+                                <i class="fa fa-eye" aria-hidden="true"></i>
+                              </a>
+                            </div>
+                          </div>
+
+                          <div class="product-info">
+                            <h3 class="product-name">
+                              <a href="#" title="">Canh vàng</a>
+                            </h3>
+                            <div class="price-box">
+                              <div class="special-price">
+                                <span class="price product-price">98,000đ</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="product-item">
+                          <div class="product-thumbnail">
+                            <a href="#" title="" class="product-thumb">
+                              <img src="public/img/thumb5.jpg" alt="" />
+                            </a>
+
+                            <div
+                              class="product-action d-flex flex-center flex-justify-center"
+                            >
+                              <a
+                                href="fds"
+                                class="btn-buy"
+                                title="Thêm vào giỏ hàng"
+                              >
+                                <i
+                                  class="fa fa-shopping-bag"
+                                  aria-hidden="true"
+                                ></i>
+                              </a>
+
+                              <a href="" class="btn-view" title="Xem chi tiết">
+                                <i class="fa fa-eye" aria-hidden="true"></i>
+                              </a>
+                            </div>
+                          </div>
+
+                          <div class="product-info">
+                            <h3 class="product-name">
+                              <a href="#" title="">Mận Sapa</a>
+                            </h3>
+                            <div class="price-box">
+                              <div class="special-price">
+                                <span class="price product-price">90,000đ</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="product-item">
+                          <div class="product-thumbnail">
+                            <a href="#" title="" class="product-thumb">
+                              <img src="public/img/thumb6.jpg" alt="" />
+                            </a>
+
+                            <div
+                              class="product-action d-flex flex-center flex-justify-center"
+                            >
+                              <a
+                                href="fds"
+                                class="btn-buy"
+                                title="Thêm vào giỏ hàng"
+                              >
+                                <i
+                                  class="fa fa-shopping-bag"
+                                  aria-hidden="true"
+                                ></i>
+                              </a>
+
+                              <a href="" class="btn-view" title="Xem chi tiết">
+                                <i class="fa fa-eye" aria-hidden="true"></i>
+                              </a>
+                            </div>
+
+                            <div class="sale-flash">
+                              <div class="before"></div>
+                              -20%
+                            </div>
+                          </div>
+
+                          <div class="product-info">
+                            <h3 class="product-name">
+                              <a href="#" title="">Măng cụt</a>
+                            </h3>
+                            <div
+                              class="price-box d-flex flex-center flex-justify-center"
+                            >
+                              <div class="special-price">
+                                <span class="price product-price">80,000đ</span>
+                              </div>
+                              <div class="old-price">
+                                <span class="price product-price-old"
+                                  >100,000đ</span
+                                >
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="product-item">
+                          <div class="product-thumbnail">
+                            <a href="#" title="" class="product-thumb">
+                              <img src="public/img/thumb7.jpg" alt="" />
+                            </a>
+
+                            <div
+                              class="product-action d-flex flex-center flex-justify-center"
+                            >
+                              <a
+                                href="fds"
+                                class="btn-buy"
+                                title="Thêm vào giỏ hàng"
+                              >
+                                <i
+                                  class="fa fa-shopping-bag"
+                                  aria-hidden="true"
+                                ></i>
+                              </a>
+
+                              <a href="" class="btn-view" title="Xem chi tiết">
+                                <i class="fa fa-eye" aria-hidden="true"></i>
+                              </a>
+                            </div>
+                          </div>
+
+                          <div class="product-info">
+                            <h3 class="product-name">
+                              <a href="#" title="">Mâm xôi đen</a>
+                            </h3>
+                            <div class="price-box">
+                              <div class="special-price">
+                                <span class="price product-price"
+                                  >199,000đ</span
+                                >
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="product-item">
+                          <div class="product-thumbnail">
+                            <a href="#" title="" class="product-thumb">
+                              <img src="public/img/thumb8.jpg" alt="" />
+                            </a>
+
+                            <div
+                              class="product-action d-flex flex-center flex-justify-center"
+                            >
+                              <a
+                                href="fds"
+                                class="btn-buy"
+                                title="Thêm vào giỏ hàng"
+                              >
+                                <i
+                                  class="fa fa-shopping-bag"
+                                  aria-hidden="true"
+                                ></i>
+                              </a>
+
+                              <a href="" class="btn-view" title="Xem chi tiết">
+                                <i class="fa fa-eye" aria-hidden="true"></i>
+                              </a>
+                            </div>
+                          </div>
+
+                          <div class="product-info">
+                            <h3 class="product-name">
+                              <a href="#" title="">Táo xanh New</a>
+                            </h3>
+                            <div class="price-box">
+                              <div class="special-price">
+                                <span class="price product-price"
+                                  >220,000đ</span
+                                >
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- End tab-tem2 -->
+                  <div class="tab-item" id="tab3">tab3</div>
+                  <!-- End tab-item3 -->
+                </div>
+                <!-- end category-custom -->
+              </div>
+              <!-- End collection-main -->
+            </div>
+            <!-- End tab-wrapper -->
+
+            <div class="tab-wrapper2">
+              <div class="collection-main">
+                <div class="section-title d-flex flex-between flex-center">
+                  <h2>Thực phẩm sạch</h2>
+
+                  <ul class="tab-title d-flex tab">
+                    <li class="current">
+                      <a href="#tab4" title="">
+                        <span>Hải sản tươi</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#tab5" title="">
+                        <span>Thịt tươi</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#tab6" title="">
+                        <span>Đồ uống</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="category-custom tab-content">
+                  <div class="tab-item" id="tab4">
+                    <ul class="owl-carousel category-product">
+                      <li>
+                        <div class="product-item">
+                          <div class="product-thumbnail">
+                            <a href="#" title="" class="product-thumb">
+                              <img src="public/img/thumb5.jpg" alt="" />
+                            </a>
+                            <div
+                              class="product-action d-flex flex-center flex-justify-center"
+                            >
+                              <a
+                                href="fds"
+                                class="btn-buy"
+                                title="Thêm vào giỏ hàng"
+                              >
+                                <i
+                                  class="fa fa-shopping-bag"
+                                  aria-hidden="true"
+                                ></i>
+                              </a>
+
+                              <a href="" class="btn-view" title="Xem chi tiết">
+                                <i class="fa fa-eye" aria-hidden="true"></i>
+                              </a>
+                            </div>
+                          </div>
+
+                          <div class="product-info">
+                            <h3 class="product-name">
+                              <a href="#" title="">Mận sapa</a>
+                            </h3>
+                            <div class="price-box">
+                              <div class="special-price">
+                                <span class="price product-price">90,000đ</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="product-item">
+                          <div class="product-thumbnail">
+                            <a href="#" title="" class="product-thumb">
+                              <img src="public/img/thumb6.jpg" alt="" />
+                            </a>
+
+                            <div
+                              class="product-action d-flex flex-center flex-justify-center"
+                            >
+                              <a
+                                href="fds"
+                                class="btn-buy"
+                                title="Thêm vào giỏ hàng"
+                              >
+                                <i
+                                  class="fa fa-shopping-bag"
+                                  aria-hidden="true"
+                                ></i>
+                              </a>
+
+                              <a href="" class="btn-view" title="Xem chi tiết">
+                                <i class="fa fa-eye" aria-hidden="true"></i>
+                              </a>
+                            </div>
+
+                            <div class="sale-flash">
+                              <div class="before"></div>
+                              -20%
+                            </div>
+                          </div>
+
+                          <div class="product-info">
+                            <h3 class="product-name">
+                              <a href="#" title="">Măng cụt</a>
+                            </h3>
+                            <div
+                              class="price-box d-flex flex-center flex-justify-center"
+                            >
+                              <div class="special-price">
+                                <span class="price product-price">80,000đ</span>
+                              </div>
+
+                              <div class="old-price">
+                                <span class="price product-price-old"
+                                  >100,000đ</span
+                                >
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="product-item">
+                          <div class="product-thumbnail">
+                            <a href="#" title="" class="product-thumb">
+                              <img src="public/img/thumb7.jpg" alt="" />
+                            </a>
+
+                            <div
+                              class="product-action d-flex flex-center flex-justify-center"
+                            >
+                              <a
+                                href="fds"
+                                class="btn-buy"
+                                title="Thêm vào giỏ hàng"
+                              >
+                                <i
+                                  class="fa fa-shopping-bag"
+                                  aria-hidden="true"
+                                ></i>
+                              </a>
+
+                              <a href="" class="btn-view" title="Xem chi tiết">
+                                <i class="fa fa-eye" aria-hidden="true"></i>
+                              </a>
+                            </div>
+                          </div>
+
+                          <div class="product-info">
+                            <h3 class="product-name">
+                              <a href="#" title="">Mâm xôi đen</a>
+                            </h3>
+                            <div class="price-box">
+                              <div class="special-price">
+                                <span class="price product-price"
+                                  >199,000đ</span
+                                >
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="product-item">
+                          <div class="product-thumbnail">
+                            <a href="#" title="" class="product-thumb">
+                              <img src="public/img/thumb8.jpg" alt="" />
+                            </a>
+
+                            <div
+                              class="product-action d-flex flex-center flex-justify-center"
+                            >
+                              <a
+                                href="fds"
+                                class="btn-buy"
+                                title="Thêm vào giỏ hàng"
+                              >
+                                <i
+                                  class="fa fa-shopping-bag"
+                                  aria-hidden="true"
+                                ></i>
+                              </a>
+
+                              <a href="" class="btn-view" title="Xem chi tiết">
+                                <i class="fa fa-eye" aria-hidden="true"></i>
+                              </a>
+                            </div>
+                          </div>
+
+                          <div class="product-info">
+                            <h3 class="product-name">
+                              <a href="#" title="">Táo xanh New</a>
+                            </h3>
+                            <div class="price-box">
+                              <div class="special-price">
+                                <span class="price product-price"
+                                  >220,000đ</span
+                                >
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="product-item">
+                          <div class="product-thumbnail">
+                            <a href="#" title="" class="product-thumb">
+                              <img src="public/img/thumb9.jpg" alt="" />
+                            </a>
+
+                            <div
+                              class="product-action d-flex flex-center flex-justify-center"
+                            >
+                              <a
+                                href="fds"
+                                class="btn-buy"
+                                title="Thêm vào giỏ hàng"
+                              >
+                                <i
+                                  class="fa fa-shopping-bag"
+                                  aria-hidden="true"
+                                ></i>
+                              </a>
+
+                              <a href="" class="btn-view" title="Xem chi tiết">
+                                <i class="fa fa-eye" aria-hidden="true"></i>
+                              </a>
+                            </div>
+
+                            <div class="sale-flash">
+                              <div class="before"></div>
+                              -35%
+                            </div>
+                          </div>
+
+                          <div class="product-info">
+                            <h3 class="product-name">
+                              <a href="#" title="">Táo đỏ Mỹ</a>
+                            </h3>
+                            <div
+                              class="price-box d-flex flex-center flex-justify-center"
+                            >
+                              <div class="special-price">
+                                <span class="price product-price">99,000đ</span>
+                              </div>
+
+                              <div class="old-price">
+                                <span class="price product-price-old"
+                                  >150,000đ</span
+                                >
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="product-item">
+                          <div class="product-thumbnail">
+                            <a href="#" title="" class="product-thumb">
+                              <img src="public/img/thumb10.jpg" alt="" />
+                            </a>
+
+                            <div
+                              class="product-action d-flex flex-center flex-justify-center"
+                            >
+                              <a
+                                href="fds"
+                                class="btn-buy"
+                                title="Thêm vào giỏ hàng"
+                              >
+                                <i
+                                  class="fa fa-shopping-bag"
+                                  aria-hidden="true"
+                                ></i>
+                              </a>
+
+                              <a href="" class="btn-view" title="Xem chi tiết">
+                                <i class="fa fa-eye" aria-hidden="true"></i>
+                              </a>
+                            </div>
+                          </div>
+
+                          <div class="product-info">
+                            <h3 class="product-name">
+                              <a href="#" title="">Combo Rau xanh</a>
+                            </h3>
+                            <div
+                              class="price-box d-flex flex-center flex-justify-center"
+                            >
+                              <div class="special-price">
+                                <span class="price product-price"
+                                  >100,000đ</span
+                                >
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="product-item">
+                          <div class="product-thumbnail">
+                            <a href="#" title="" class="product-thumb">
+                              <img src="public/img/thumb11.jpg" alt="" />
+                            </a>
+
+                            <div
+                              class="product-action d-flex flex-center flex-justify-center"
+                            >
+                              <a
+                                href="fds"
+                                class="btn-buy"
+                                title="Thêm vào giỏ hàng"
+                              >
+                                <i
+                                  class="fa fa-shopping-bag"
+                                  aria-hidden="true"
+                                ></i>
+                              </a>
+
+                              <a href="" class="btn-view" title="Xem chi tiết">
+                                <i class="fa fa-eye" aria-hidden="true"></i>
+                              </a>
+                            </div>
+                          </div>
+
+                          <div class="product-info">
+                            <h3 class="product-name">
+                              <a href="#" title="">Bơ sáp</a>
+                            </h3>
+                            <div class="price-box">
+                              <div class="special-price">
+                                <span class="price product-price"
+                                  >120,000đ</span
+                                >
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="product-item">
+                          <div class="product-thumbnail">
+                            <a href="#" title="" class="product-thumb">
+                              <img src="public/img/thumb12.jpg" alt="" />
+                            </a>
+
+                            <div
+                              class="product-action d-flex flex-center flex-justify-center"
+                            >
+                              <a
+                                href="fds"
+                                class="btn-buy"
+                                title="Thêm vào giỏ hàng"
+                              >
+                                <i
+                                  class="fa fa-shopping-bag"
+                                  aria-hidden="true"
+                                ></i>
+                              </a>
+
+                              <a href="" class="btn-view" title="Xem chi tiết">
+                                <i class="fa fa-eye" aria-hidden="true"></i>
+                              </a>
+                            </div>
+                          </div>
+
+                          <div class="product-info">
+                            <h3 class="product-name">
+                              <a href="#" title="">Đào</a>
+                            </h3>
+                            <div class="price-box">
+                              <div class="special-price">
+                                <span class="price product-price">80,000đ</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- End tab -->
+
+                  <div class="tab-item" id="tab5">
+                    <p style="color: red">oh year!!!!!!</p>
+                  </div>
+                  <div class="tab-item" id="tab6">
+                    <p style="color: red">yeeeeeeeeeee!!!</p>
+                  </div>
+                </div>
+              </div>
+              <!-- end collection-main -->
+            </div>
+            <!-- End tab-wrapper -->
+
+            <div class="owl-carousel" id="banner-slider-content">
+              <div>
+                <a href="#" title="">
+                  <img src="public/img/bn1-0x0.png" alt="" />
+                </a>
+              </div>
+              <div>
+                <a href="#" title="">
+                  <img src="public/img/bn2-0x0.jpg" alt="" />
+                </a>
+              </div>
+            </div>
+
+            <section class="section" id="news-custom">
+              <div class="section-title">
+                <h2>
+                  <a href="" title="">Tin Tức</a>
+                </h2>
+              </div>
+              <div class="section-content">
+                <ul class="owl-carousel blog-item">
+                  <li>
+                    <div class="blog-item-thumbnail">
+                      <a href="" title="" class="thumb">
+                        <img src="public/img/rau-huu-co-480x274.jpg" alt="" />
+                      </a>
+                    </div>
+                    <div class="blog-item-info">
+                      <h3 class="blog-item-name">
+                        <a href="" title="">
+                          <span
+                            >Bí mật dinh dưỡng thú vị từ màu sắc rau quả bạn nên
+                            biết</span
+                          >
+                        </a>
+                      </h3>
+
+                      <p class="blog-item-summary">
+                        Mỗi loại thực vật có một màu sắc đặc trưng và cũng có
+                        các chất dinh dưỡng đặc trưng khác nhau. Những loại rau,
+                        củ quả, có màu sắc càng mạnh thì dinh dưỡng…
+                      </p>
+
+                      <a href="" class="btn-more" title="">Xem thêm</a>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div class="blog-item-thumbnail">
+                      <a href="" title="" class="thumb">
+                        <img
+                          src="public/img/organic-produce-480x274.jpg"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+                    <div class="blog-item-info">
+                      <h3 class="blog-item-name">
+                        <a href="" title="">
+                          <span
+                            >Phân biệt Thực phẩm Hữu cơ và thực phẩm Tự
+                            nhiên</span
+                          >
+                        </a>
+                      </h3>
+
+                      <p class="blog-item-summary">
+                        Nhật Bản là đất nước có nhiều loại hoa quả có chất lượng
+                        thuộc hàng ngon nhất thế giới nhưng cũng vô cùng đắt đỏ.
+                        Đáng chú ý, nhiều loại quả do nông dân…
+                      </p>
+
+                      <a href="" class="btn-more" title="">Xem thêm</a>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div class="blog-item-thumbnail">
+                      <a href="" title="" class="thumb">
+                        <img src="public/img/blog1-480x274.jpg" alt="" />
+                      </a>
+                    </div>
+                    <div class="blog-item-info">
+                      <h3 class="blog-item-name">
+                        <a href="" title="">
+                          <span
+                            >Những loại trái cây Nhật đắt như vàng ròng đổ bộ về
+                            Việt Nam</span
+                          >
+                        </a>
+                      </h3>
+
+                      <p class="blog-item-summary">
+                        Nhật Bản là đất nước có nhiều loại hoa quả có chất lượng
+                        thuộc hàng ngon nhất thế giới nhưng cũng vô cùng đắt đỏ.
+                        Đáng chú ý, nhiều loại quả do nông dân…
+                      </p>
+
+                      <a href="" class="btn-more" title="">Xem thêm</a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
+
+            <section class="section" id="section-testimonial">
+              <div class="section-title">
+                <h2>
+                  <a href="" title="">Phản Hồi của khách hàng</a>
+                </h2>
+
+                <p>
+                  Phản hồi của những khách hàng đã và đang sử dụng sản phẩm
+                  trong suốt những năm qua
+                </p>
+              </div>
+              <div class="section-content">
+                <ul class="owl-carousel" id="testimonial-slider">
+                  <li>
+                    <div class="image-avata">
+                      <img src="public/img/kh4-250x250.png" alt="" />
+                    </div>
+                    <h4 class="name">Nhân viên văn phòng - Mr. Thành</h4>
+                    <div class="designation">
+                      Là một người khá kỹ tính, tôi luôn luôn lựa chọn những
+                      thực phẩm sạch nhất. Và đây là nơi tôi đặt trọng niềm tin
+                    </div>
+                  </li>
+
+                  <li>
+                    <div class="image-avata">
+                      <img src="public/img/kh5-250x250.jpg" alt="" />
+                    </div>
+                    <h4 class="name">Nhân viên - Thu Phương</h4>
+                    <div class="designation">
+                      Tôi rất tin tưởng mua thực phẩm ở FreshFood, mỗi lần công
+                      ty có liên hoan tôi lại đặt hoa quả ở đây, sẽ luôn ủng hộ
+                      FreshFood dài dài
+                    </div>
+                  </li>
+
+                  <li>
+                    <div class="image-avata">
+                      <img src="public/img/kh2-250x250.jpg" alt="" />
+                    </div>
+                    <h4 class="name">Nội trợ - Hoàng Yến</h4>
+                    <div class="designation">
+                      Đối với người làm nội trợ tôi thì việc thực phẩm xuất xứ
+                      rõ nguồn gốc, đảm bảo an toàn thực phẩm rất quan trọng vì
+                      vậy tôi rất tin tưởng ở FreshFood
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
+
+            <section id="section-brand">
+              <ul class="owl-carousel" id="brand-slider">
+                <li>
+                  <a href="" title="">
+                    <img src="public/img/brand1-165x80.png" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="public/img/brand2-165x80.png" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="" title="">
+                    <img src="public/img/brand1-165x80.png" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="public/img/brand2-165x80.png" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="" title="">
+                    <img src="public/img/brand1-165x80.png" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="public/img/brand2-165x80.png" alt="" />
+                  </a>
+                </li>
+              </ul>
+            </section>
+          </div>
+          <!-- End container -->
+        </div>
+        <!-- content -->
+
+        <footer id="footer">
+          <div class="container d-flex flex-between">
+            <div class="box contact">
+              <div class="box-head">
+                <h3>Liên hệ</h3>
+              </div>
+              <div class="box-body">
+                <ul>
+                  <li class="address">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    <p>Da Nang, Viet Nam</p>
+                  </li>
+                  <li class="phone">
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                    <p>0378700580</p>
+                  </li>
+                  <li class="email">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <p>tdh04121999@hotmail.com</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="box about">
+              <div class="box-head">
+                <h3>Thông tin</h3>
+              </div>
+              <div class="box-body">
+                <ul>
+                  <li>
+                    <a href="" title="">Giới thiệu</a>
+                  </li>
+                  <li>
+                    <a href="" title="">Thông tin vận chuyển</a>
+                  </li>
+                  <li>
+                    <a href="" title="">Quy định và điều khoản</a>
+                  </li>
+                  <li>
+                    <a href="" title="">Chính sách bảo mật</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="box facebook">
+              <div class="box-head">
+                <h3>Facebook</h3>
+            </div>
+          </div>
+          <!-- end container -->
+
+          <!--- Back to top -->
+          <p id="back-to-top" title="Back home page">
+            <i class="fa fa-angle-up" aria-hidden="true"></i>
+          </p>
+        </footer>
+
+        <div id="copyright">
+          <div class="container">
+            <p>© Copyright 2020 Fresh Food. Thiết kế bởi <b>PlusWeb</b></p>
+          </div>
+        </div>
+      </div>
+      <!-- End wp-content -->
+    </div>
+    <!-- End WRAPPER -->
+  </body>
+</html>
